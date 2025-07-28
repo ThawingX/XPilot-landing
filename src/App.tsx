@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Twitter, MessageCircle, Zap, Users, Check, ArrowRight, Mail, Phone, MapPin, Menu, X, Play, Star, Clock, Target, TrendingUp } from 'lucide-react';
+import { Twitter, MessageCircle, Zap, Users, Check, ArrowRight, Mail, Menu, X, Play, Star, Clock, Target, TrendingUp } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -24,7 +24,7 @@ function App() {
               <div className="bg-[#4792E6] p-2 rounded-lg">
                 <Twitter className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">TwitterVibe</span>
+              <span className="text-xl font-bold text-gray-900">X Pilot</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -104,17 +104,17 @@ function App() {
               <div className="mb-6">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[#4792E6]/10 text-[#4792E6] border border-[#4792E6]/20">
                   <Star className="h-4 w-4 mr-2" />
-                  Join 10K+ others now
+                  Join 50+ others now
                 </span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Meet <span className="text-[#4792E6]">TwitterVibe</span>, your<br />
-                AI <span className="text-[#4792E6]">Twitter growth</span> expert
+                Meet <span className="text-[#4792E6]">X Pilot</span>, your<br />
+                AI <span className="text-[#4792E6]">X growth</span> expert
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                Built for creators, businesses, and marketers to organically grow their brand with intelligent reply suggestions and automated posting.
+                Experience Vibe Operation - just chat with our AI to complete your X account management. Built for creators, businesses, and marketers to organically grow their brand with intelligent engagement.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -133,7 +133,7 @@ function App() {
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-green-600 border-2 border-white"></div>
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-purple-600 border-2 border-white"></div>
                 </div>
-                <span className="text-sm text-gray-600">Join 10K+ others now</span>
+                <span className="text-sm text-gray-600">Join 50+ others now</span>
               </div>
             </div>
 
@@ -146,7 +146,7 @@ function App() {
                     <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                     <div className="w-3 h-3 rounded-full bg-green-400"></div>
                   </div>
-                  <span className="text-sm text-gray-500">TwitterVibe Dashboard</span>
+                  <span className="text-sm text-gray-500">X Pilot Dashboard</span>
                   <div className="w-16"></div>
                 </div>
                 
@@ -157,41 +157,76 @@ function App() {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                          JD
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white text-sm font-medium">
+                          RV
                         </div>
                         <div className="flex-1">
-                          <div className="text-sm text-gray-600 mb-1">@john_doe</div>
-                          <div className="text-sm text-gray-900 mb-2">Just launched my new project! Excited to share it with everyone.</div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="text-sm font-medium text-gray-900">Raju Vishwas</div>
+                            <div className="text-sm text-gray-500">@rajuvishwas</div>
+                            <div className="text-sm text-gray-500">1:45 PM · Mar 27, 2025</div>
+                          </div>
+                          <div className="text-sm text-gray-900 mb-2">The worst part of building in public?</div>
+                          <div className="text-sm text-gray-700 mb-3">
+                            Feeling like you're behind...<br />
+                            ...even when no one's actually racing you.
+                          </div>
+                          <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span>💬 8</span>
+                            <span>🔄 6</span>
+                            <span>❤️ 164</span>
+                            <span>📊 1.2K</span>
+                          </div>
                           <div className="bg-white rounded-lg p-3 border border-green-200">
-                            <div className="text-sm text-gray-700 mb-2">✨ AI Suggested Reply:</div>
-                            <div className="text-sm text-gray-900">"Congratulations on the launch! The interface looks incredibly clean and user-friendly. Can't wait to try it out!"</div>
-                            <button className="mt-2 bg-[#4792E6] text-white px-4 py-1 rounded-full text-xs hover:bg-[#3a7bc8] transition-colors">
-                              Post Reply
-                            </button>
+                            <div className="text-xs text-blue-600 mb-2">● SUGGESTED REPLY</div>
+                            <div className="text-sm text-gray-900 mb-3">So true. The biggest paradox of building in public is that the transparency meant to liberate often becomes another source of pressure. At XPilot we remind ourselves daily that progress isn't linear - and that's perfectly fine.</div>
+                            <div className="flex gap-2">
+                              <button className="bg-red-50 text-red-600 px-3 py-1 rounded text-xs border border-red-200 hover:bg-red-100 transition-colors">
+                                ✕ Reject
+                              </button>
+                              <button className="bg-green-500 text-white px-4 py-1 rounded text-xs hover:bg-green-600 transition-colors">
+                                ✓ Post reply
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="bg-gray-50 rounded-lg p-4 relative overflow-hidden">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white text-sm font-medium">
-                          SM
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white text-sm font-medium">
+                          ET
                         </div>
                         <div className="flex-1">
-                          <div className="text-sm text-gray-600 mb-1">@sarah_m</div>
-                          <div className="text-sm text-gray-900 mb-2">Looking for recommendations on productivity tools...</div>
-                          <div className="bg-white rounded-lg p-3 border border-green-200">
-                            <div className="text-sm text-gray-700 mb-2">✨ AI Suggested Reply:</div>
-                            <div className="text-sm text-gray-900">"I've been using Notion for project management and it's been a game-changer! The templates save so much time."</div>
-                            <button className="mt-2 bg-[#4792E6] text-white px-4 py-1 rounded-full text-xs hover:bg-[#3a7bc8] transition-colors">
-                              Post Reply
-                            </button>
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="text-sm font-medium text-gray-900">Emma Thompson</div>
+                            <div className="text-sm text-gray-500">@emmabuild</div>
+                            <div className="text-sm text-gray-500">3:22 PM · Mar 27, 2025</div>
+                          </div>
+                          <div className="text-sm text-gray-900 mb-2">Just launched our new AI-powered analytics dashboard! 🚀</div>
+                          <div className="text-sm text-gray-700 mb-3">
+                            Real-time insights, predictive modeling, and automated reporting all in one place.
+                          </div>
+                          <div className="flex items-center gap-4 text-sm text-gray-500">
+                            <span>💬 15</span>
+                            <span>🔄 23</span>
+                            <span>❤️ 89</span>
+                            <span>📊 2.1K</span>
                           </div>
                         </div>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-50 to-transparent"></div>
+                    </div>
+
+                    <div className="text-center py-2">
+                      <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
+                        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                        <span className="ml-2">3 more posts in queue</span>
                       </div>
                     </div>
                   </div>
@@ -216,15 +251,98 @@ function App() {
         </div>
       </section>
 
+      {/* Video Demo Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              See X Pilot in Action
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Watch how X Pilot transforms your social media management with AI-powered automation
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+              {/* Video Placeholder */}
+              <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center relative">
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 bg-black/20"></div>
+                <button className="relative z-10 bg-white/90 hover:bg-white rounded-full p-6 transition-all duration-300 hover:scale-110 shadow-lg">
+                  <svg className="w-12 h-12 text-[#4792E6] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+                
+                {/* Video Title Overlay */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4">
+                    <h3 className="text-white font-semibold text-lg mb-1">X Pilot Demo: AI-Powered Social Media Management</h3>
+                    <p className="text-gray-200 text-sm">Learn how to automate your X engagement in under 3 minutes</p>
+                  </div>
+                </div>
+
+                {/* Duration Badge */}
+                <div className="absolute top-4 right-4">
+                  <span className="bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                    2:47
+                  </span>
+                </div>
+
+                {/* Thumbnail Preview */}
+                <div className="absolute inset-0 opacity-30">
+                  <div className="w-full h-full bg-gradient-to-r from-[#4792E6]/20 to-purple-600/20"></div>
+                </div>
+              </div>
+
+              {/* Video Info Bar */}
+              <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-[#4792E6] rounded-full flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-semibold text-gray-900">X Pilot</span>
+                    </div>
+                    <div className="text-sm text-gray-500">•</div>
+                    <div className="text-sm text-gray-600">Product Demo</div>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <span className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      1.2K views
+                    </span>
+                    <span>•</span>
+                    <span>2 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-8">
+              <p className="text-gray-600 mb-4">Ready to get started?</p>
+              <button className="bg-[#4792E6] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3a7bc8] transition-colors shadow-lg">
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Introducing <span className="text-[#4792E6]">TwitterVibe</span>
+              Introducing <span className="text-[#4792E6]">X Pilot</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              TwitterVibe is built on a network of AI browser agents specialized in social media, 
+              X Pilot is built on a network of AI browser agents specialized in social media, 
               executing proven growth strategies tailored to your brand that get better over time.
             </p>
           </div>
@@ -373,12 +491,12 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Starter Plan */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-gray-900 mb-2">$29<span className="text-lg text-gray-600 font-normal">/month</span></div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">$19<span className="text-lg text-gray-600 font-normal">/month</span></div>
                 <p className="text-gray-600">Perfect for individuals</p>
               </div>
               <ul className="space-y-4 mb-8">
@@ -404,48 +522,14 @@ function App() {
               </button>
             </div>
 
-            {/* Pro Plan */}
+            {/* Enterprise Plan */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#4792E6] hover:shadow-xl transition-shadow relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-[#4792E6] text-white px-4 py-2 rounded-full text-sm font-medium">Most Popular</span>
               </div>
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Pro</h3>
-                <div className="text-4xl font-bold text-gray-900 mb-2">$79<span className="text-lg text-gray-600 font-normal">/month</span></div>
-                <p className="text-gray-600">For growing businesses</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span>200 AI replies per day</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span>Advanced content templates</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span>Priority support</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span>Advanced analytics</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span>Custom reply styles</span>
-                </li>
-              </ul>
-              <button className="w-full bg-[#4792E6] text-white py-3 rounded-full font-semibold hover:bg-[#3a7bc8] transition-colors">
-                Get Started
-              </button>
-            </div>
-
-            {/* Enterprise Plan */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-              <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-gray-900 mb-2">$199<span className="text-lg text-gray-600 font-normal">/month</span></div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">Contact Sales</div>
                 <p className="text-gray-600">For large organizations</p>
               </div>
               <ul className="space-y-4 mb-8">
@@ -470,7 +554,7 @@ function App() {
                   <span>API integration</span>
                 </li>
               </ul>
-              <button className="w-full border-2 border-[#4792E6] text-[#4792E6] py-3 rounded-full font-semibold hover:bg-[#4792E6] hover:text-white transition-colors">
+              <button className="w-full bg-[#4792E6] text-white py-3 rounded-full font-semibold hover:bg-[#3a7bc8] transition-colors">
                 Contact Sales
               </button>
             </div>
@@ -484,117 +568,30 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Contact us</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions or need support? We're here to help you succeed with TwitterVibe.
+              Have questions or need support? We're here to help you succeed with X Pilot.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4792E6] focus:border-transparent"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input 
-                      type="email" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4792E6] focus:border-transparent"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4792E6] focus:border-transparent"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4792E6] focus:border-transparent"
-                    placeholder="Tell us more about your needs..."
-                  />
-                </div>
-                <button className="w-full bg-[#4792E6] text-white py-3 rounded-lg font-semibold hover:bg-[#3a7bc8] transition-colors">
-                  Send Message
-                </button>
-              </form>
-            </div>
-
+          <div className="max-w-2xl mx-auto">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in touch</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Get in touch</h3>
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 justify-center">
                     <div className="bg-[#4792E6]/10 p-3 rounded-lg">
                       <Mail className="h-6 w-6 text-[#4792E6]" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">Email</div>
-                      <div className="text-gray-600">support@twittervibe.com</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="bg-[#4792E6]/10 p-3 rounded-lg">
-                      <Phone className="h-6 w-6 text-[#4792E6]" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">Phone</div>
-                      <div className="text-gray-600">+1 (555) 123-4567</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="bg-[#4792E6]/10 p-3 rounded-lg">
-                      <MapPin className="h-6 w-6 text-[#4792E6]" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">Address</div>
-                      <div className="text-gray-600">123 Innovation Drive, San Francisco, CA 94105</div>
+                      <div className="text-gray-600">xDylanLong@gmail.com</div>
+                      <div className="text-gray-600">linyanxu5@gmail.com</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#4792E6]/5 p-6 rounded-2xl">
-                <h4 className="font-semibold text-gray-900 mb-3">Business Hours</h4>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM PST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM PST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
-                  </div>
-                </div>
-              </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
-                <h4 className="font-semibold text-gray-900 mb-3">Quick Links</h4>
-                <div className="space-y-2">
-                  <a href="#" className="block text-[#4792E6] hover:text-[#3a7bc8] transition-colors">Documentation</a>
-                  <a href="#" className="block text-[#4792E6] hover:text-[#3a7bc8] transition-colors">API Reference</a>
-                  <a href="#" className="block text-[#4792E6] hover:text-[#3a7bc8] transition-colors">Community Forum</a>
-                  <a href="#" className="block text-[#4792E6] hover:text-[#3a7bc8] transition-colors">Status Page</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -609,10 +606,10 @@ function App() {
                 <div className="bg-[#4792E6] p-2 rounded-lg">
                   <Twitter className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-xl font-bold">TwitterVibe</span>
+                <span className="text-xl font-bold">X Pilot</span>
               </div>
               <p className="text-gray-400 mb-4">
-                Revolutionary social media growth platform algorithms, bringing dead creative expertise to anyone.
+                AI-powered X account management through intelligent chat operations.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -648,7 +645,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 TwitterVibe. All rights reserved.</p>
+            <p>&copy; 2025 X Pilot. All rights reserved.</p>
           </div>
         </div>
       </footer>

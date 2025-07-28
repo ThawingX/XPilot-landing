@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Twitter, MessageCircle, Zap, Users, Check, ArrowRight, Mail, Menu, X, Play, Star, Clock, Target, TrendingUp } from 'lucide-react';
+import { Twitter, MessageCircle, Zap, Users, Check, ArrowRight, Mail, Menu, X, Play, Star, Clock, Target, TrendingUp, Search, User, CheckCircle, Heart } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -15,7 +15,56 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 0 5px rgba(71, 146, 230, 0.3); }
+          50% { box-shadow: 0 0 20px rgba(71, 146, 230, 0.6), 0 0 30px rgba(71, 146, 230, 0.4); }
+        }
+        
+        @keyframes shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+        
+        @keyframes bounce-in {
+          0% { transform: scale(0.3) rotate(-10deg); opacity: 0; }
+          50% { transform: scale(1.05) rotate(5deg); }
+          70% { transform: scale(0.9) rotate(-2deg); }
+          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        
+        .float-animation { animation: float 3s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .shimmer-bg {
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+          background-size: 200% 100%;
+          animation: shimmer 2s infinite;
+        }
+        .bounce-in { animation: bounce-in 0.6s ease-out; }
+        
+        .gradient-text {
+          background: linear-gradient(135deg, #4792E6, #3a7bc8, #2563eb);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        
+        .card-hover {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+          transform: translateY(-4px) scale(1.02);
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+      `}</style>
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,22 +75,22 @@ function App() {
               </div>
               <span className="text-xl font-bold text-gray-900">X Pilot</span>
             </div>
-            
+
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <button 
+              <button
                 onClick={() => scrollToSection('home')}
                 className={`text-sm font-medium transition-colors ${activeSection === 'home' ? 'text-[#4792E6]' : 'text-gray-600 hover:text-[#4792E6]'}`}
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('pricing')}
                 className={`text-sm font-medium transition-colors ${activeSection === 'pricing' ? 'text-[#4792E6]' : 'text-gray-600 hover:text-[#4792E6]'}`}
               >
                 Pricing
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className={`text-sm font-medium transition-colors ${activeSection === 'contact' ? 'text-[#4792E6]' : 'text-gray-600 hover:text-[#4792E6]'}`}
               >
@@ -53,7 +102,7 @@ function App() {
             </nav>
 
             {/* Mobile menu button */}
-            <button 
+            <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -66,19 +115,19 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100">
             <div className="px-4 py-4 space-y-4">
-              <button 
+              <button
                 onClick={() => scrollToSection('home')}
                 className="block w-full text-left text-gray-600 hover:text-[#4792E6] font-medium"
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('pricing')}
                 className="block w-full text-left text-gray-600 hover:text-[#4792E6] font-medium"
               >
                 Pricing
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left text-gray-600 hover:text-[#4792E6] font-medium"
               >
@@ -97,7 +146,7 @@ function App() {
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#4792E6]/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-indigo-200/30 to-transparent rounded-full blur-2xl"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -107,16 +156,16 @@ function App() {
                   Join 50+ others now
                 </span>
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Meet <span className="text-[#4792E6]">X Pilot</span>, your<br />
                 AI <span className="text-[#4792E6]">X growth</span> expert
               </h1>
-              
+
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
                 Experience Vibe Operation - just chat with our AI to complete your X account management. Built for creators, businesses, and marketers to organically grow their brand with intelligent engagement.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button className="bg-[#4792E6] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#3a7bc8] transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                   Get started <ArrowRight className="h-5 w-5" />
@@ -149,101 +198,218 @@ function App() {
                   <span className="text-sm text-gray-500">X Pilot Dashboard</span>
                   <div className="w-16"></div>
                 </div>
-                
+
                 <div className="p-6">
+
+                  {/* Inspiration Accounts Section */}
                   <div className="mb-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Engagement Queue</h3>
-                    <div className="text-sm text-gray-500">Recent Overview</div>
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-semibold text-gray-900">Inspiration Accounts</h3>
+                      <div className="flex space-x-2">
+                        <button className="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded-full">Starred</button>
+                        <button className="px-2 py-1 text-xs text-blue-600 bg-blue-100 rounded-full">Outreach</button>
+                      </div>
+                    </div>
+                    
+                    <div className="relative mb-3">
+                      <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 w-3 h-3 text-gray-400" />
+                      <input 
+                        type="text" 
+                        placeholder="Search accounts..." 
+                        className="w-full pl-7 pr-3 py-1.5 text-xs border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      />
+                    </div>
+                    
+                    <div className="flex items-center text-xs text-gray-600 mb-3">
+                      <Users className="w-3 h-3 mr-1" />
+                      8 accounts
+                    </div>
                   </div>
-                  
-                  <div className="space-y-4">
-                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white text-sm font-medium">
-                          RV
+
+                  <div className="space-y-2">
+                    {/* Naval Ravikant - Selected */}
+                    <div className="card-hover pulse-glow flex items-center justify-between p-3 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 border-2 border-blue-300 rounded-xl transition-all duration-300 hover:shadow-lg cursor-pointer group transform hover:scale-[1.02] relative overflow-hidden">
+                      <div className="absolute inset-0 shimmer-bg opacity-30"></div>
+                      <div className="flex items-center space-x-3 relative z-10">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md float-animation">
+                          <User className="w-4 h-4 text-white" />
                         </div>
                         <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <div className="text-sm font-medium text-gray-900">Raju Vishwas</div>
-                            <div className="text-sm text-gray-500">@rajuvishwas</div>
-                            <div className="text-sm text-gray-500">1:45 PM · Mar 27, 2025</div>
-                          </div>
-                          <div className="text-sm text-gray-900 mb-2">The worst part of building in public?</div>
-                          <div className="text-sm text-gray-700 mb-3">
-                            Feeling like you're behind...<br />
-                            ...even when no one's actually racing you.
-                          </div>
-                          <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                            <span>💬 8</span>
-                            <span>🔄 6</span>
-                            <span>❤️ 164</span>
-                            <span>📊 1.2K</span>
-                          </div>
-                          <div className="bg-white rounded-lg p-3 border border-green-200">
-                            <div className="text-xs text-blue-600 mb-2">● SUGGESTED REPLY</div>
-                            <div className="text-sm text-gray-900 mb-3">So true. The biggest paradox of building in public is that the transparency meant to liberate often becomes another source of pressure. At XPilot we remind ourselves daily that progress isn't linear - and that's perfectly fine.</div>
-                            <div className="flex gap-2">
-                              <button className="bg-red-50 text-red-600 px-3 py-1 rounded text-xs border border-red-200 hover:bg-red-100 transition-colors">
-                                ✕ Reject
-                              </button>
-                              <button className="bg-green-500 text-white px-4 py-1 rounded text-xs hover:bg-green-600 transition-colors">
-                                ✓ Post reply
-                              </button>
+                          <div className="flex items-center space-x-2 mb-1">
+                            <span className="font-semibold text-gray-900 text-sm gradient-text">Naval Ravikant</span>
+                            <CheckCircle className="w-3 h-3 text-blue-500 bounce-in" />
+                            <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs rounded-full font-medium">Small</span>
+                            <div className="px-2 py-0.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs rounded-full font-medium animate-pulse shadow-sm bounce-in">
+                              ✓ Selected
                             </div>
                           </div>
+                          <p className="text-xs text-gray-600 font-medium">@naval</p>
+                          <p className="text-xs text-gray-700 mt-1">Entrepreneur, investor, and philosopher. Sharing insights on wealth, happiness, ...</p>
+                          <div className="flex items-center space-x-3 text-xs text-gray-500 mt-2">
+                            <span className="flex items-center"><Users className="w-2.5 h-2.5 mr-1" />2.1M</span>
+                            <span className="flex items-center"><Heart className="w-2.5 h-2.5 mr-1" />890.0K</span>
+                            <span className="text-blue-600 font-medium flex items-center bounce-in">
+                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-1 animate-pulse"></div>
+                              AI Learning Style
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2 relative z-10">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current float-animation" />
+                        <div className="w-8 h-4 bg-blue-500 rounded-full relative shadow-sm pulse-glow">
+                          <div className="w-3 h-3 bg-white rounded-full absolute right-0.5 top-0.5 shadow-sm transition-transform duration-200 group-hover:scale-110"></div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-4 relative overflow-hidden">
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white text-sm font-medium">
-                          ET
+                    {/* Tim Cook - Hover state */}
+                    <div className="card-hover flex items-center justify-between p-3 hover:bg-gradient-to-r hover:from-gray-50 hover:via-blue-50 hover:to-gray-50 rounded-xl transition-all duration-300 hover:shadow-md cursor-pointer group transform hover:scale-[1.01] border border-transparent hover:border-blue-200 relative overflow-hidden">
+                      <div className="absolute inset-0 shimmer-bg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                      <div className="flex items-center space-x-3 relative z-10">
+                        <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-500 group-hover:from-blue-400 group-hover:to-blue-500 rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:float-animation">
+                          <User className="w-4 h-4 text-white" />
                         </div>
                         <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <div className="text-sm font-medium text-gray-900">Emma Thompson</div>
-                            <div className="text-sm text-gray-500">@emmabuild</div>
-                            <div className="text-sm text-gray-500">3:22 PM · Mar 27, 2025</div>
+                          <div className="flex items-center space-x-2 mb-1">
+                            <span className="font-semibold text-gray-900 text-sm group-hover:gradient-text transition-all duration-300">Tim Cook</span>
+                            <CheckCircle className="w-3 h-3 text-blue-500 group-hover:bounce-in" />
+                            <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors duration-300">Medium</span>
                           </div>
-                          <div className="text-sm text-gray-900 mb-2">Just launched our new AI-powered analytics dashboard! 🚀</div>
-                          <div className="text-sm text-gray-700 mb-3">
-                            Real-time insights, predictive modeling, and automated reporting all in one place.
-                          </div>
-                          <div className="flex items-center gap-4 text-sm text-gray-500">
-                            <span>💬 15</span>
-                            <span>🔄 23</span>
-                            <span>❤️ 89</span>
-                            <span>📊 2.1K</span>
+                          <p className="text-xs text-gray-600 font-medium">@tim_cook</p>
+                          <p className="text-xs text-gray-700 mt-1">CEO of Apple. Passionate about technology, privacy, and human rights.</p>
+                          <div className="flex items-center space-x-3 text-xs text-gray-500 mt-2">
+                            <span className="flex items-center"><Users className="w-2.5 h-2.5 mr-1" />13.5M</span>
+                            <span className="flex items-center"><Heart className="w-2.5 h-2.5 mr-1" />2.1M</span>
+                            <span className="text-gray-400 group-hover:text-blue-600 transition-colors duration-300 font-medium opacity-0 group-hover:opacity-100 bounce-in">Click to select</span>
                           </div>
                         </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-50 to-transparent"></div>
+                      <div className="flex items-center space-x-2 relative z-10">
+                        <Star className="w-4 h-4 text-gray-300 group-hover:text-yellow-400 transition-colors duration-300 group-hover:float-animation" />
+                        <div className="w-8 h-4 bg-gray-300 group-hover:bg-blue-200 rounded-full relative shadow-sm transition-colors duration-300 group-hover:pulse-glow">
+                          <div className="w-3 h-3 bg-white rounded-full absolute left-0.5 top-0.5 shadow-sm transition-transform duration-200 group-hover:translate-x-3 group-hover:bg-blue-500"></div>
+                        </div>
+                      </div>
                     </div>
 
-                    <div className="text-center py-2">
-                      <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
-                        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                        <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                        <span className="ml-2">3 more posts in queue</span>
+                    {/* Reid Hoffman */}
+                    <div className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
+                          <User className="w-3 h-3 text-gray-600" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-1">
+                            <span className="font-medium text-gray-900 text-xs">Reid Hoffman</span>
+                            <CheckCircle className="w-2.5 h-2.5 text-blue-500" />
+                            <span className="px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Small</span>
+                          </div>
+                          <p className="text-xs text-gray-600">@reidhoffman</p>
+                          <p className="text-xs text-gray-700">Co-founder of LinkedIn. Partner at Greylock. Entrepreneur and investor.</p>
+                          <div className="flex items-center space-x-2 text-xs text-gray-500">
+                            <span className="flex items-center"><Users className="w-2 h-2 mr-0.5" />3.2M</span>
+                            <span className="flex items-center"><Heart className="w-2 h-2 mr-0.5" />1.2M</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-3 h-3 text-gray-400" />
+                        <div className="w-6 h-3 bg-gray-300 rounded-full relative">
+                          <div className="w-2.5 h-2.5 bg-white rounded-full absolute left-0.5 top-0.5"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Satya Nadella */}
+                    <div className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
+                          <User className="w-3 h-3 text-gray-600" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-1">
+                            <span className="font-medium text-gray-900 text-xs">Satya Nadella</span>
+                            <CheckCircle className="w-2.5 h-2.5 text-blue-500" />
+                            <span className="px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Small</span>
+                          </div>
+                          <p className="text-xs text-gray-600">@satyanadella</p>
+                          <p className="text-xs text-gray-700">CEO of Microsoft. Empowering every person and organization on the planet to achi...</p>
+                          <div className="flex items-center space-x-2 text-xs text-gray-500">
+                            <span className="flex items-center"><Users className="w-2 h-2 mr-0.5" />2.6M</span>
+                            <span className="flex items-center"><Heart className="w-2 h-2 mr-0.5" />950.0K</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-3 h-3 text-gray-400" />
+                        <div className="w-6 h-3 bg-gray-300 rounded-full relative">
+                          <div className="w-2.5 h-2.5 bg-white rounded-full absolute left-0.5 top-0.5"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Marc Benioff */}
+                    <div className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
+                          <User className="w-3 h-3 text-gray-600" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-1">
+                            <span className="font-medium text-gray-900 text-xs">Marc Benioff</span>
+                            <CheckCircle className="w-2.5 h-2.5 text-blue-500" />
+                            <span className="px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Small</span>
+                          </div>
+                          <p className="text-xs text-gray-600">@benioff</p>
+                          <p className="text-xs text-gray-700">Chairman and CEO of Salesforce. Philanthropist and advocate for equality.</p>
+                          <div className="flex items-center space-x-2 text-xs text-gray-500">
+                            <span className="flex items-center"><Users className="w-2 h-2 mr-0.5" />1.9M</span>
+                            <span className="flex items-center"><Heart className="w-2 h-2 mr-0.5" />780.0K</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-3 h-3 text-gray-400" />
+                        <div className="w-6 h-3 bg-gray-300 rounded-full relative">
+                          <div className="w-2.5 h-2.5 bg-white rounded-full absolute left-0.5 top-0.5"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-center py-4 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-xl border-2 border-blue-200 mt-4 relative overflow-hidden pulse-glow">
+                      <div className="absolute inset-0 shimmer-bg opacity-40"></div>
+                      <div className="relative z-10">
+                        <div className="flex items-center justify-center gap-3 text-gray-600 text-sm mb-2">
+                          <div className="flex gap-1">
+                            <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-bounce float-animation"></div>
+                            <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-bounce float-animation" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-bounce float-animation" style={{ animationDelay: '0.2s' }}></div>
+                          </div>
+                          <span className="font-semibold gradient-text">Analyzing inspiration accounts</span>
+                          <div className="text-xs bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full font-medium shadow-md animate-pulse bounce-in">
+                            🤖 AI Learning
+                          </div>
+                        </div>
+                        <div className="text-xs text-blue-600 font-semibold bounce-in">
+                          🎯 Customizing content generation based on Naval's style
+                        </div>
+                        <div className="text-xs text-purple-600 font-medium mt-1 bounce-in" style={{ animationDelay: '0.3s' }}>
+                          ✨ Adapting tone, topics, and engagement patterns
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-gray-200">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-500">Daily Limit</span>
-                      <span className="text-gray-900 font-medium">47 / 50</span>
-                    </div>
-                  </div>
                 </div>
               </div>
+
+            
 
               <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-3 border border-gray-200">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                  <span className="text-gray-600">Watch the full tutorial</span>
+                  <span className="text-gray-600">Discover inspiration accounts</span>
                 </div>
               </div>
             </div>
@@ -251,85 +417,266 @@ function App() {
         </div>
       </section>
 
-      {/* Video Demo Section */}
+      {/* Dashboard Demo Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              See X Pilot in Action
+              X Pilot Dashboard
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Watch how X Pilot transforms your social media management with AI-powered automation
+              Watch X Pilot find relevant posts and generate personalized replies in real-time
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-              {/* Video Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center relative">
-                {/* Play Button Overlay */}
-                <div className="absolute inset-0 bg-black/20"></div>
-                <button className="relative z-10 bg-white/90 hover:bg-white rounded-full p-6 transition-all duration-300 hover:scale-110 shadow-lg">
-                  <svg className="w-12 h-12 text-[#4792E6] ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </button>
-                
-                {/* Video Title Overlay */}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4">
-                    <h3 className="text-white font-semibold text-lg mb-1">X Pilot Demo: AI-Powered Social Media Management</h3>
-                    <p className="text-gray-200 text-sm">Learn how to automate your X engagement in under 3 minutes</p>
-                  </div>
-                </div>
-
-                {/* Duration Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className="bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
-                    2:47
-                  </span>
-                </div>
-
-                {/* Thumbnail Preview */}
-                <div className="absolute inset-0 opacity-30">
-                  <div className="w-full h-full bg-gradient-to-r from-[#4792E6]/20 to-purple-600/20"></div>
-                </div>
-              </div>
-
-              {/* Video Info Bar */}
-              <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-[#4792E6] rounded-full flex items-center justify-center">
-                        <Zap className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="font-semibold text-gray-900">X Pilot</span>
+          <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 p-6">
+            <div className="flex gap-6 h-[600px]">
+              {/* Left Side - Engagement Queue (75% width) */}
+              <div className="flex-[3] flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Engagement Queue</h3>
+                    <div className="flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm text-green-700 font-medium">AI actively monitoring</span>
                     </div>
-                    <div className="text-sm text-gray-500">•</div>
-                    <div className="text-sm text-gray-600">Product Demo</div>
                   </div>
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <span className="flex items-center gap-1">
+                  <div className="text-sm text-gray-500 bg-blue-50 px-3 py-1 rounded-full opacity-0 animate-fade-in" style={{ animationDelay: '3s', animationFillMode: 'forwards' }}>
+                    2 new opportunities found
+                  </div>
+                </div>
+
+                <div className="space-y-4 flex-1 overflow-y-auto">
+                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 relative opacity-0 animate-fade-in" style={{ animationDelay: '4s', animationFillMode: 'forwards' }}>
+                    {/* AI Found Indicator */}
+                    <div className="absolute top-2 right-2">
+                      <div className="flex items-center gap-1 bg-green-100 px-2 py-1 rounded-full text-xs text-green-600 opacity-0 animate-fade-in" style={{ animationDelay: '4.5s', animationFillMode: 'forwards' }}>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+                        <span>AI Found</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white text-sm font-medium">
+                        AS
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="text-sm font-medium text-gray-900">Alex Smith</div>
+                          <div className="text-sm text-gray-500">@alexbuilds</div>
+                          <div className="text-sm text-gray-500">2:45 PM · Mar 27, 2025</div>
+                        </div>
+                        <div className="text-sm text-gray-900 mb-2">Building in public is harder than I thought 😅</div>
+                        <div className="text-sm text-gray-700 mb-3">
+                          The pressure to constantly share progress can sometimes feel overwhelming.
+                          Anyone else struggling with this balance?
+                        </div>
+                        <div className="flex items-center gap-4 text-sm text-gray-500">
+                          <span>💬 12</span>
+                          <span>🔄 8</span>
+                          <span>❤️ 45</span>
+                          <span>📊 1.2K</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-lg p-4 border border-gray-200 relative opacity-0 animate-fade-in" style={{ animationDelay: '6s', animationFillMode: 'forwards' }}>
+                      <div className="border-l-4 border-blue-500 pl-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-2">
+                            <div className="text-xs text-blue-600 flex items-center gap-1 opacity-0 animate-fade-in" style={{ animationDelay: '6.5s', animationFillMode: 'forwards' }}>
+                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
+                              <span>AI GENERATED REPLY</span>
+                            </div>
+                          </div>
+                          <div className="text-xs text-gray-400 opacity-0 animate-fade-in" style={{ animationDelay: '6.5s', animationFillMode: 'forwards' }}>via Chat Analysis</div>
+                        </div>
+
+                        {/* Typing Animation Container */}
+                        <div className="text-sm text-gray-900 mb-3 relative">
+                          <div className="opacity-0 animate-fade-in" style={{ animationDelay: '7s', animationFillMode: 'forwards' }}>
+                            So true. The biggest paradox of building in public is that the transparency meant to liberate often becomes another source of pressure. At XPilot we remind ourselves daily that progress isn't linear - and that's perfectly fine.
+                          </div>
+                          {/* Typing Cursor */}
+                          <span className="inline-block w-0.5 h-4 bg-blue-500 ml-1 animate-blink opacity-0" style={{ animationDelay: '7s', animationFillMode: 'forwards' }}></span>
+                        </div>
+
+                        <div className="flex items-center justify-between opacity-0 animate-fade-in" style={{ animationDelay: '8s', animationFillMode: 'forwards' }}>
+                          <div className="flex gap-2">
+                            <button className="bg-red-50 text-red-600 px-3 py-1 rounded text-xs border border-red-200 hover:bg-red-100 transition-all duration-200 hover:scale-105">
+                              ✕ Reject
+                            </button>
+                            <button className="bg-green-500 text-white px-4 py-1 rounded text-xs hover:bg-green-600 transition-all duration-200 hover:scale-105 shadow-sm">
+                              ✓ Post reply
+                            </button>
+                          </div>
+                          <div className="text-xs text-gray-400 flex items-center gap-1">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                            <span>95% match</span>
+                          </div>
+                        </div>
+
+                        {/* Loading Animation Overlay (initially hidden) */}
+                        <div className="absolute inset-0 bg-white/90 rounded-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300" id="loading-overlay">
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <div className="flex gap-1">
+                              <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                              <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                              <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                            </div>
+                            <span>AI generating reply...</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-4 relative overflow-hidden opacity-0 animate-fade-in" style={{ animationDelay: '9s', animationFillMode: 'forwards' }}>
+                    {/* AI Analysis Animation */}
+                    <div className="absolute top-2 right-2">
+                      <div className="flex items-center gap-1 bg-yellow-100 px-2 py-1 rounded-full text-xs text-yellow-600 opacity-0 animate-fade-in" style={{ animationDelay: '9.5s', animationFillMode: 'forwards' }}>
+                        <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <span>Analyzing</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white text-sm font-medium">
+                        ET
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="text-sm font-medium text-gray-900">Emma Thompson</div>
+                          <div className="text-sm text-gray-500">@emmabuild</div>
+                          <div className="text-sm text-gray-500">3:22 PM · Mar 27, 2025</div>
+                        </div>
+                        <div className="text-sm text-gray-900 mb-2">Just launched our new AI-powered analytics dashboard! 🚀</div>
+                        <div className="text-sm text-gray-700 mb-3">
+                          Real-time insights, predictive modeling, and automated reporting all in one place.
+                        </div>
+                        <div className="flex items-center gap-4 text-sm text-gray-500">
+                          <span>💬 15</span>
+                          <span>🔄 23</span>
+                          <span>❤️ 89</span>
+                          <span>📊 2.1K</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-50 to-transparent"></div>
+                  </div>
+
+                  <div className="text-center py-2 opacity-0 animate-fade-in" style={{ animationDelay: '10s', animationFillMode: 'forwards' }}>
+                    <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
+                      <div className="flex gap-1">
+                        <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse"></div>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                        <div className="w-1 h-1 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                      </div>
+                      <span className="ml-2">3 more posts in queue</span>
+                      <div className="ml-2 text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-full">
+                        AI Processing
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - Live Chat with AI (25% width) */}
+              <div className="flex-[1] bg-gray-50 rounded-xl border border-gray-200 p-4 flex flex-col h-full">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-sm text-gray-700 font-semibold">Live Chat with AI</span>
+                  <div className="ml-auto bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
+                    Active
+                  </div>
+                </div>
+
+                <div className="space-y-3 text-sm flex-1 overflow-y-auto mb-4">
+                  <div className="flex items-start gap-2">
+                    <div className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg max-w-[85%] border border-blue-200">
+                      <div className="font-medium mb-1 text-blue-600">You:</div>
+                      <div>"Find posts about building in public and suggest thoughtful replies"</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+                    <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
+                      <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                      <div>
+                        "Searching for relevant posts... 🔍"
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+                    <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
+                      <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                      <div>
+                        "Found 2 relevant posts! Generating personalized replies based on your brand voice... ✨"
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '8.5s', animationFillMode: 'forwards' }}>
+                    <div className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg max-w-[85%] border border-blue-200">
+                      <div className="font-medium mb-1 text-blue-600">You:</div>
+                      <div>"Great! Show me the engagement queue"</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '9s', animationFillMode: 'forwards' }}>
+                    <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
+                      <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                      <div>
+                        "Here's your engagement queue → Check the posts on the left. I've prioritized them by engagement potential!"
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '10.5s', animationFillMode: 'forwards' }}>
+                    <div className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg max-w-[85%] border border-blue-200">
+                      <div className="font-medium mb-1 text-blue-600">You:</div>
+                      <div>"Perfect! The first reply looks great. Can you find more posts like this?"</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '11s', animationFillMode: 'forwards' }}>
+                    <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
+                      <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                      <div>
+                        "Absolutely! I'm continuously monitoring for similar opportunities. I'll notify you when I find more posts about building in public 🎯"
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-gray-200 pt-3">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="Ask X Pilot anything..."
+                      className="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#4792E6] focus:border-transparent bg-white"
+                    />
+                    <button className="bg-[#4792E6] text-white p-2 rounded-lg hover:bg-[#3a7bc8] transition-colors">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                       </svg>
-                      1.2K views
-                    </span>
-                    <span>•</span>
-                    <span>2 days ago</span>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="text-center mt-8">
-              <p className="text-gray-600 mb-4">Ready to get started?</p>
-              <button className="bg-[#4792E6] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3a7bc8] transition-colors shadow-lg">
-                Start Free Trial
-              </button>
-            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-8">
+            <p className="text-gray-600 mb-4">Ready to get started?</p>
+            <button className="bg-[#4792E6] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3a7bc8] transition-colors shadow-lg">
+              Start Free Trial
+            </button>
           </div>
         </div>
       </section>
@@ -342,7 +689,7 @@ function App() {
               Introducing <span className="text-[#4792E6]">X Pilot</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              X Pilot is built on a network of AI browser agents specialized in social media, 
+              X Pilot is built on a network of AI browser agents specialized in social media,
               executing proven growth strategies tailored to your brand that get better over time.
             </p>
           </div>
@@ -426,7 +773,7 @@ function App() {
                   <span className="text-sm font-medium text-gray-900">+127%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-[#4792E6] h-2 rounded-full" style={{width: '85%'}}></div>
+                  <div className="bg-[#4792E6] h-2 rounded-full" style={{ width: '85%' }}></div>
                 </div>
               </div>
             </div>
@@ -461,11 +808,11 @@ function App() {
               Your personal AI-first Twitter and works like magic
             </span>
           </div>
-          
+
           <h2 className="text-3xl md:text-5xl font-bold mb-8">
             Are you ready to <span className="italic">level up</span>?
           </h2>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-lg font-medium">
               🚀 Get started now
@@ -474,7 +821,7 @@ function App() {
               Let's grow! 🔥
             </div>
           </div>
-          
+
           <button className="bg-white text-[#4792E6] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
             Get started now
           </button>
@@ -650,6 +997,7 @@ function App() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
 

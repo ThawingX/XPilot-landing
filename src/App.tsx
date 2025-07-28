@@ -594,14 +594,14 @@ function App() {
                 </div>
 
                 <div className="space-y-3 text-sm flex-1 overflow-y-auto mb-4">
-                  <div className="flex items-start gap-2">
+                  <div className="flex items-start gap-2 justify-end">
                     <div className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg max-w-[85%] border border-blue-200">
                       <div className="font-medium mb-1 text-blue-600">You:</div>
                       <div>"Find posts about building in public and suggest thoughtful replies"</div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
                     <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
                       <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
                       <div>
@@ -610,7 +610,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
                     <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
                       <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
                       <div>
@@ -619,14 +619,14 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '8.5s', animationFillMode: 'forwards' }}>
+                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '8.5s', animationFillMode: 'forwards' }}>
                     <div className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg max-w-[85%] border border-blue-200">
                       <div className="font-medium mb-1 text-blue-600">You:</div>
                       <div>"Great! Show me the engagement queue"</div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '9s', animationFillMode: 'forwards' }}>
+                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '9s', animationFillMode: 'forwards' }}>
                     <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
                       <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
                       <div>
@@ -635,14 +635,14 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '10.5s', animationFillMode: 'forwards' }}>
+                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '10.5s', animationFillMode: 'forwards' }}>
                     <div className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg max-w-[85%] border border-blue-200">
                       <div className="font-medium mb-1 text-blue-600">You:</div>
                       <div>"Perfect! The first reply looks great. Can you find more posts like this?"</div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2 justify-end opacity-0 animate-fade-in" style={{ animationDelay: '11s', animationFillMode: 'forwards' }}>
+                  <div className="flex items-start gap-2 opacity-0 animate-fade-in" style={{ animationDelay: '11s', animationFillMode: 'forwards' }}>
                     <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
                       <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
                       <div>

@@ -1074,35 +1074,35 @@ function App() {
                   AI-powered X account management through intelligent chat operations.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-400 transition-colors hover:text-white">
+                  <span className="text-gray-400">
                     <Twitter className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="text-gray-400 transition-colors hover:text-white">
+                  </span>
+                  <span className="text-gray-400">
                     <Mail className="w-5 h-5" />
-                  </a>
+                  </span>
                 </div>
               </div>
               <div>
                 <h4 className="mb-4 font-semibold">Company</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li><a href="#" className="transition-colors hover:text-white">About</a></li>
-                  <li><a href="#" className="transition-colors hover:text-white">Careers</a></li>
-                  <li><a href="#" className="transition-colors hover:text-white">Join Email List</a></li>
+                  <li><span>About</span></li>
+                  <li><span>Careers</span></li>
+                  <li><span>Join Email List</span></li>
                 </ul>
               </div>
               <div>
                 <h4 className="mb-4 font-semibold">Legal</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li><a href="#" className="transition-colors hover:text-white">Privacy Policy</a></li>
-                  <li><a href="#" className="transition-colors hover:text-white">Terms of Service</a></li>
+                  <li><span>Privacy Policy</span></li>
+                  <li><span>Terms of Service</span></li>
                 </ul>
               </div>
               <div>
                 <h4 className="mb-4 font-semibold">Resources</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li><a href="#" className="transition-colors hover:text-white">Help Center</a></li>
-                  <li><a href="#" className="transition-colors hover:text-white">Documentation</a></li>
-                  <li><a href="#" className="transition-colors hover:text-white">API</a></li>
+                  <li><span>Help Center</span></li>
+                  <li><span>Documentation</span></li>
+                  <li><span>API</span></li>
                 </ul>
               </div>
             </div>

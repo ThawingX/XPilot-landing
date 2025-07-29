@@ -222,7 +222,7 @@ function App() {
                     
                     <div className="flex items-center text-xs text-gray-600 mb-3">
                       <Users className="w-3 h-3 mr-1" />
-                      8 accounts
+                      6 accounts
                     </div>
                   </div>
 
@@ -289,62 +289,6 @@ function App() {
                         <Star className="w-4 h-4 text-gray-300 group-hover:text-yellow-400 transition-colors duration-300 group-hover:float-animation" />
                         <div className="w-8 h-4 bg-gray-300 group-hover:bg-blue-200 rounded-full relative shadow-sm transition-colors duration-300 group-hover:pulse-glow">
                           <div className="w-3 h-3 bg-white rounded-full absolute left-0.5 top-0.5 shadow-sm transition-transform duration-200 group-hover:translate-x-3 group-hover:bg-blue-500"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Reid Hoffman */}
-                    <div className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
-                          <User className="w-3 h-3 text-gray-600" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-1">
-                            <span className="font-medium text-gray-900 text-xs">Reid Hoffman</span>
-                            <CheckCircle className="w-2.5 h-2.5 text-blue-500" />
-                            <span className="px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Small</span>
-                          </div>
-                          <p className="text-xs text-gray-600">@reidhoffman</p>
-                          <p className="text-xs text-gray-700">Co-founder of LinkedIn. Partner at Greylock. Entrepreneur and investor.</p>
-                          <div className="flex items-center space-x-2 text-xs text-gray-500">
-                            <span className="flex items-center"><Users className="w-2 h-2 mr-0.5" />3.2M</span>
-                            <span className="flex items-center"><Heart className="w-2 h-2 mr-0.5" />1.2M</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-3 h-3 text-gray-400" />
-                        <div className="w-6 h-3 bg-gray-300 rounded-full relative">
-                          <div className="w-2.5 h-2.5 bg-white rounded-full absolute left-0.5 top-0.5"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Satya Nadella */}
-                    <div className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
-                          <User className="w-3 h-3 text-gray-600" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-1">
-                            <span className="font-medium text-gray-900 text-xs">Satya Nadella</span>
-                            <CheckCircle className="w-2.5 h-2.5 text-blue-500" />
-                            <span className="px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Small</span>
-                          </div>
-                          <p className="text-xs text-gray-600">@satyanadella</p>
-                          <p className="text-xs text-gray-700">CEO of Microsoft. Empowering every person and organization on the planet to achi...</p>
-                          <div className="flex items-center space-x-2 text-xs text-gray-500">
-                            <span className="flex items-center"><Users className="w-2 h-2 mr-0.5" />2.6M</span>
-                            <span className="flex items-center"><Heart className="w-2 h-2 mr-0.5" />950.0K</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-3 h-3 text-gray-400" />
-                        <div className="w-6 h-3 bg-gray-300 rounded-full relative">
-                          <div className="w-2.5 h-2.5 bg-white rounded-full absolute left-0.5 top-0.5"></div>
                         </div>
                       </div>
                     </div>

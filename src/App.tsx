@@ -666,6 +666,102 @@ function App() {
           </div>
         </section>
 
+        {/* Who is X Pilot for Section */}
+        <section className="py-20 bg-white">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
+                Who is <span className="text-[#4792E6]">X Pilot</span> for?
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl text-gray-600 mb-8">
+                You know that growth = value + consistency + interaction
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3 mb-16">
+              <div className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 card-hover">
+                <div className="bg-[#4792E6]/10 p-4 rounded-lg w-fit mb-6">
+                  <User className="h-8 w-8 text-[#4792E6]" />
+                </div>
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">Indie Hackers & Creators</h3>
+                <p className="leading-relaxed text-gray-600">
+                  You're an indie hacker, creator, or solopreneur trying to grow on X. You want to automate the grunt work, not your voice.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border border-purple-100 card-hover">
+                <div className="bg-[#4792E6]/10 p-4 rounded-lg w-fit mb-6">
+                  <TrendingUp className="h-8 w-8 text-[#4792E6]" />
+                </div>
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">Product Builders</h3>
+                <p className="leading-relaxed text-gray-600">
+                  You're building a product, and X is your main growth channel. You need consistent engagement without burning out.
+                </p>
+              </div>
+
+              <div className="p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100 card-hover">
+                <div className="bg-[#4792E6]/10 p-4 rounded-lg w-fit mb-6">
+                  <Target className="h-8 w-8 text-[#4792E6]" />
+                </div>
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">Growth-Focused Operators</h3>
+                <p className="leading-relaxed text-gray-600">
+                  You understand that authentic engagement drives real growth, but manual work doesn't scale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why X Pilot Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="mb-16 text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-[#4792E6] bg-blue-100 rounded-full">
+                <span>💡</span>
+                <span>Why X Pilot?</span>
+              </div>
+              <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
+                I was <span className="text-[#4792E6] italic">exhausted</span>
+              </h2>
+            </div>
+
+            <div className="mx-auto max-w-4xl">
+              <div className="p-8 mb-8 bg-white rounded-2xl border border-gray-200 shadow-lg">
+                <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                  Running my X account meant writing posts, replying to comments, engaging with others, and sending DMs — every day, all day. 
+                  The more time I spent, the harder it was to stay consistent and get results.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                  AI was powerful, but what I needed was:
+                </p>
+                <div className="p-6 mb-6 bg-gradient-to-r from-[#4792E6]/10 to-blue-100 rounded-xl border-l-4 border-[#4792E6]">
+                  <p className="text-lg font-semibold text-gray-900">
+                    A tool that connects strategy + content + interaction — all in one loop.
+                  </p>
+                </div>
+                <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                  So I built it:
+                </p>
+                <div className="p-6 mb-6 bg-gradient-to-r from-[#4792E6] to-blue-600 rounded-xl text-white">
+                  <p className="text-lg font-semibold text-center">
+                    X Pilot = Content Engine + AI Replies + Scheduling + Growth Strategy
+                  </p>
+                </div>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="p-4 bg-red-50 rounded-lg border border-red-200">
+                    <p className="text-sm font-medium text-red-800 mb-2">❌ It's NOT for "ghostwriting"</p>
+                    <p className="text-sm text-red-700">Generic AI content that sounds robotic</p>
+                  </div>
+                  <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                    <p className="text-sm font-medium text-green-800 mb-2">✅ It's FOR authentic scaling</p>
+                    <p className="text-sm text-green-700">People who want to own their vibe and scale their voice — without doing everything manually</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -677,6 +773,17 @@ function App() {
               <p className="mx-auto max-w-3xl text-xl text-gray-600">
                 The power of a 10-person marketing team — without the $500K payroll or hours of manual research yourself.
               </p>
+              <div className="flex justify-center items-center gap-4 mt-8">
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">
+                  <span className="text-sm font-medium text-gray-600">🎯 Strategic Growth</span>
+                </div>
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">
+                  <span className="text-sm font-medium text-gray-600">⚡ Authentic Voice</span>
+                </div>
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">
+                  <span className="text-sm font-medium text-gray-600">🚀 Scalable Results</span>
+                </div>
+              </div>
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">

@@ -673,12 +673,12 @@ function App() {
               <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
                 Who is <span className="text-[#4792E6]">X Pilot</span> for?
               </h2>
-              <p className="mx-auto max-w-3xl text-xl text-gray-600 mb-8">
+              <p className="mx-auto mb-8 max-w-3xl text-xl text-gray-600">
                 You know that growth = value + consistency + interaction
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3 mb-16">
+            <div className="grid gap-8 mb-16 md:grid-cols-3">
               <div className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 card-hover">
                 <div className="bg-[#4792E6]/10 p-4 rounded-lg w-fit mb-6">
                   <User className="h-8 w-8 text-[#4792E6]" />
@@ -749,11 +749,11 @@ function App() {
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="p-4 bg-red-50 rounded-lg border border-red-200">
-                    <p className="text-sm font-medium text-red-800 mb-2">❌ It's NOT for "ghostwriting"</p>
+                    <p className="mb-2 text-sm font-medium text-red-800">❌ It's NOT for "ghostwriting"</p>
                     <p className="text-sm text-red-700">Generic AI content that sounds robotic</p>
                   </div>
                   <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                    <p className="text-sm font-medium text-green-800 mb-2">✅ It's FOR authentic scaling</p>
+                    <p className="mb-2 text-sm font-medium text-green-800">✅ It's FOR authentic scaling</p>
                     <p className="text-sm text-green-700">People who want to own their vibe and scale their voice — without doing everything manually</p>
                   </div>
                 </div>
@@ -763,83 +763,153 @@ function App() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/30">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mb-16 text-center">
-              <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
-                Scale your brand to the<br />
-                <span className="text-[#4792E6] italic">next level</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-[#4792E6] bg-blue-100 rounded-full">
+                <span>🚀</span>
+                <span>Transform Your Growth</span>
+              </div>
+              <h2 className="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl max-w-6xl mx-auto px-6 text-center">
+                <span className="whitespace-nowrap">Scale your brand to the{' '}</span>
+                <span className="text-[#4792E6] italic bg-gradient-to-r from-[#4792E6] to-blue-600 bg-clip-text text-transparent whitespace-nowrap pr-4 md:pr-6 lg:pr-8">
+                  next level
+                </span>
               </h2>
-              <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                The power of a 10-person marketing team — without the $500K payroll or hours of manual research yourself.
+              <p className="mx-auto max-w-4xl text-xl leading-relaxed text-gray-600">
+                Stop spending 15+ hours weekly on manual engagement. Get the power of a dedicated marketing team — 
+                <span className="text-[#4792E6] font-semibold"> without the $500K payroll or endless manual work</span>.
               </p>
-              <div className="flex justify-center items-center gap-4 mt-8">
-                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">
-                  <span className="text-sm font-medium text-gray-600">🎯 Strategic Growth</span>
+              
+              {/* Key Value Props */}
+              <div className="flex flex-wrap gap-3 justify-center items-center mt-8">
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
+                  <span className="text-sm font-medium text-gray-700">🎯 Strategic Growth</span>
                 </div>
-                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">
-                  <span className="text-sm font-medium text-gray-600">⚡ Authentic Voice</span>
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
+                  <span className="text-sm font-medium text-gray-700">⚡ Authentic Voice</span>
                 </div>
-                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">
-                  <span className="text-sm font-medium text-gray-600">🚀 Scalable Results</span>
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
+                  <span className="text-sm font-medium text-gray-700">🚀 Scalable Results</span>
+                </div>
+                <div className="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm transition-shadow hover:shadow-md">
+                  <span className="text-sm font-medium text-gray-700">⏱️ 90% Time Saved</span>
                 </div>
               </div>
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="p-8 text-white bg-gray-900 rounded-2xl">
+              {/* Time Efficiency Card */}
+              <div className="p-8 text-white bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-700 card-hover">
                 <div className="mb-6">
-                  <Clock className="h-12 w-12 text-[#4792E6] mb-4" />
-                  <h3 className="mb-2 text-xl font-semibold">⏰ Save Time</h3>
-                </div>
-                <p className="mb-4 text-gray-300">
-                  Top creators spend 10-15 hours weekly on manual research and engagement. Let us do all the heavy lifting while you focus more on what you love.
-                </p>
-                <div className="p-4 bg-gray-800 rounded-lg">
-                  <div className="space-y-2">
-                    <div className="bg-[#4792E6] text-white px-3 py-1 rounded text-sm">Researching leads</div>
-                    <div className="bg-[#4792E6] text-white px-3 py-1 rounded text-sm">Personalizing outreach</div>
-                    <div className="px-3 py-1 text-sm text-gray-300 bg-gray-700 rounded">Manual follow-ups</div>
+                  <div className="bg-[#4792E6]/20 p-3 rounded-lg w-fit mb-4">
+                    <Clock className="h-10 w-10 text-[#4792E6]" />
                   </div>
+                  <h3 className="mb-2 text-xl font-semibold">⏰ Reclaim Your Time</h3>
                 </div>
-              </div>
-
-              <div className="p-8 bg-white rounded-2xl border border-gray-200">
-                <div className="mb-6">
-                  <Zap className="h-12 w-12 text-[#4792E6] mb-4" />
-                  <h3 className="mb-2 text-xl font-semibold text-gray-900">⚡ Get Quality Value</h3>
-                </div>
-                <p className="mb-4 text-gray-600">
-                  Turn social noise and complex analytics into simple insights and actions. If you're ever confused, we're here to help.
+                <p className="mb-6 leading-relaxed text-gray-300">
+                  Top creators spend <span className="text-[#4792E6] font-semibold">10-15 hours weekly</span> on manual research and engagement. 
+                  We automate the grunt work so you can focus on what matters.
                 </p>
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-600">Engagement Rate</span>
-                    <span className="text-sm font-medium text-gray-900">+127%</span>
-                  </div>
-                  <div className="w-full h-2 bg-gray-200 rounded-full">
-                    <div className="bg-[#4792E6] h-2 rounded-full" style={{ width: '85%' }}></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#4792E6] text-white p-8 rounded-2xl">
-                <div className="mb-6">
-                  <Users className="mb-4 w-12 h-12 text-white" />
-                  <h3 className="mb-2 text-xl font-semibold">🚀 Grow Audience</h3>
-                </div>
-                <p className="mb-4 text-blue-100">
-                  Turn your followers into a community that builds you a community that builds you a community that builds you a community.
-                </p>
-                <div className="p-4 rounded-lg bg-white/10">
-                  <div className="flex gap-2 items-center mb-2">
-                    <div className="w-8 h-8 rounded-full bg-white/20"></div>
-                    <div>
-                      <div className="text-sm font-medium">New Follower</div>
-                      <div className="text-xs text-blue-200">+47 this week</div>
+                <div className="p-4 bg-gray-800 rounded-lg border border-gray-700">
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-400">Manual Research</span>
+                      <span className="px-2 py-1 text-xs text-white bg-red-500 rounded">15h/week</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-400">With X Pilot</span>
+                      <span className="text-xs bg-[#4792E6] text-white px-2 py-1 rounded">1.5h/week</span>
+                    </div>
+                    <div className="pt-2 border-t border-gray-700">
+                      <span className="text-sm font-medium text-[#4792E6]">90% time saved</span>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Quality & Analytics Card */}
+              <div className="p-8 bg-white rounded-2xl border border-gray-200 shadow-lg card-hover">
+                <div className="mb-6">
+                  <div className="bg-[#4792E6]/10 p-3 rounded-lg w-fit mb-4">
+                    <Zap className="h-10 w-10 text-[#4792E6]" />
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold text-gray-900">⚡ Smart Insights</h3>
+                </div>
+                <p className="mb-6 leading-relaxed text-gray-600">
+                  Transform social noise into <span className="text-[#4792E6] font-semibold">actionable insights</span>. 
+                  Our AI analyzes patterns and suggests optimal engagement strategies.
+                </p>
+                <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Engagement Rate</span>
+                      <span className="text-sm font-bold text-green-600">+127%</span>
+                    </div>
+                    <div className="overflow-hidden w-full h-3 bg-gray-200 rounded-full">
+                      <div className="bg-gradient-to-r from-[#4792E6] to-blue-500 h-3 rounded-full transition-all duration-1000" style={{ width: '85%' }}></div>
+                    </div>
+                    <div className="flex justify-between text-xs text-gray-500">
+                      <span>Before</span>
+                      <span>After X Pilot</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Community Growth Card */}
+              <div className="bg-gradient-to-br from-[#4792E6] to-blue-600 text-white p-8 rounded-2xl shadow-lg card-hover">
+                <div className="mb-6">
+                  <div className="p-3 mb-4 rounded-lg bg-white/20 w-fit">
+                    <Users className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold">🚀 Build Community</h3>
+                </div>
+                <p className="mb-6 leading-relaxed text-blue-100">
+                  Turn followers into <span className="font-semibold text-white">engaged community members</span> who 
+                  amplify your message and drive organic growth.
+                </p>
+                <div className="p-4 rounded-lg border backdrop-blur-sm bg-white/10 border-white/20">
+                  <div className="space-y-3">
+                    <div className="flex gap-3 items-center">
+                      <div className="flex justify-center items-center w-8 h-8 rounded-full bg-white/30">
+                        <span className="text-xs font-bold">+</span>
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium">Quality Followers</div>
+                        <div className="text-xs text-blue-200">+47 this week</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm font-bold">2.3K</div>
+                        <div className="text-xs text-blue-200">total</div>
+                      </div>
+                    </div>
+                    <div className="pt-2 border-t border-white/20">
+                      <span className="text-xs text-blue-200">Authentic engagement, not vanity metrics</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="mt-16 text-center">
+              <div className="p-8 mx-auto max-w-4xl bg-white rounded-2xl border border-gray-200 shadow-lg">
+                <h3 className="mb-4 text-2xl font-bold text-gray-900">
+                  Ready to <span className="text-[#4792E6]">10x your Twitter growth</span>?
+                </h3>
+                <p className="mb-6 text-lg text-gray-600">
+                  Join 50+ creators who've transformed their X presence with AI-powered automation
+                </p>
+                <div className="flex flex-col gap-4 justify-center items-center sm:flex-row">
+                  <button className="bg-[#4792E6] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3a7bc8] transition-colors shadow-lg">
+                    Start Free Trial
+                  </button>
+                  <button className="border-2 border-[#4792E6] text-[#4792E6] px-8 py-3 rounded-lg font-semibold hover:bg-[#4792E6] hover:text-white transition-colors">
+                    See Demo
+                  </button>
+                </div>
+                <p className="mt-4 text-sm text-gray-500">No credit card required • 7-day free trial</p>
               </div>
             </div>
           </div>

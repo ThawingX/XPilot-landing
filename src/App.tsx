@@ -70,10 +70,8 @@ function App() {
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-2">
-                <div className="bg-[#4792E6] p-2 rounded-lg">
-                  <Twitter className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-xl font-bold text-gray-900">X Pilot</span>
+                <img src="/xpilot-logo-fill-white.jpg" alt="X-Pilot Logo" className="w-10 h-10 rounded-lg" />
+                <span className="text-xl font-bold text-gray-900">X-Pilot</span>
               </div>
 
               {/* Desktop Navigation */}
@@ -189,7 +187,7 @@ function App() {
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-500">X Pilot Dashboard</span>
+                    <span className="text-sm text-gray-500">X-Pilot Dashboard</span>
                     <div className="w-16"></div>
                   </div>
 
@@ -360,7 +358,7 @@ function App() {
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Auto Enagement In X Pilot
+                Auto Enagement In X-Pilot
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Find relevant posts and generate personalized replies in real-time
@@ -541,7 +539,7 @@ function App() {
 
                     <div className="flex gap-2 items-start opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
                       <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
-                        <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                        <div className="font-medium mb-1 text-[#4792E6]">X-Pilot AI:</div>
                         <div>
                           "Searching for relevant posts... 🔍"
                         </div>
@@ -550,7 +548,7 @@ function App() {
 
                     <div className="flex gap-2 items-start opacity-0 animate-fade-in" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
                       <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
-                        <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                        <div className="font-medium mb-1 text-[#4792E6]">X-Pilot AI:</div>
                         <div>
                           "Found 2 relevant posts! Generating personalized replies based on your brand voice... ✨"
                         </div>
@@ -566,7 +564,7 @@ function App() {
 
                     <div className="flex gap-2 items-start opacity-0 animate-fade-in" style={{ animationDelay: '9s', animationFillMode: 'forwards' }}>
                       <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
-                        <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                        <div className="font-medium mb-1 text-[#4792E6]">X-Pilot AI:</div>
                         <div>
                           "Here's your engagement queue → Check the posts on the left. I've prioritized them by engagement potential!"
                         </div>
@@ -582,7 +580,7 @@ function App() {
 
                     <div className="flex gap-2 items-start opacity-0 animate-fade-in" style={{ animationDelay: '11s', animationFillMode: 'forwards' }}>
                       <div className="bg-white text-gray-800 px-3 py-2 rounded-lg max-w-[85%] border border-gray-200 shadow-sm">
-                        <div className="font-medium mb-1 text-[#4792E6]">X Pilot AI:</div>
+                        <div className="font-medium mb-1 text-[#4792E6]">X-Pilot AI:</div>
                         <div>
                           "Absolutely! I'm continuously monitoring for similar opportunities. I'll notify you when I find more posts about building in public 🎯"
                         </div>
@@ -594,7 +592,7 @@ function App() {
                     <div className="flex gap-2 items-center">
                       <input
                         type="text"
-                        placeholder="Ask X Pilot anything..."
+                        placeholder="Ask X-Pilot anything..."
                         className="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#4792E6] focus:border-transparent bg-white"
                       />
                       <button className="bg-[#4792E6] text-white p-2 rounded-lg hover:bg-[#3a7bc8] transition-colors">
@@ -624,10 +622,10 @@ function App() {
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
-                Introducing <span className="text-[#4792E6]">X Pilot</span>
+                Introducing <span className="text-[#4792E6]">X-Pilot</span>
               </h2>
               <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                X Pilot is an AI-powered growth assistant for X (formerly Twitter).<br/>
+                X-Pilot is an AI-powered growth assistant for X (formerly Twitter).<br/>
                 It helps <span className="text-[#4792E6]">creators, indie hackers, and operators</span> grow their accounts with automated engagement, content generation, and strategic planning<br/> — <span className="text-[#4792E6]">all without burning out.</span><br/>
               </p>
             </div>
@@ -666,12 +664,12 @@ function App() {
           </div>
         </section>
 
-        {/* Who is X Pilot for Section */}
+        {/* Who is X-Pilot for Section */}
         <section className="py-20 bg-white">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
-                Who is <span className="text-[#4792E6]">X Pilot</span> for?
+                Who is <span className="text-[#4792E6]">X-Pilot</span> for?
               </h2>
               <p className="mx-auto mb-8 max-w-3xl text-xl text-gray-600">
                 You know that growth = value + consistency + interaction
@@ -712,13 +710,13 @@ function App() {
           </div>
         </section>
 
-        {/* Why X Pilot Section */}
+        {/* Why X-Pilot Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mb-16 text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-[#4792E6] bg-blue-100 rounded-full">
                 <span>💡</span>
-                <span>Why X Pilot?</span>
+                <span>Why X-Pilot?</span>
               </div>
               <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
                 I was <span className="text-[#4792E6] italic">exhausted</span>
@@ -744,7 +742,7 @@ function App() {
                 </p>
                 <div className="p-6 mb-6 bg-gradient-to-r from-[#4792E6] to-blue-600 rounded-xl text-white">
                   <p className="text-lg font-semibold text-center">
-                    X Pilot = Content Engine + AI Replies + Scheduling + Growth Strategy
+                    X-Pilot = Content Engine + AI Replies + Scheduling + Growth Strategy
                   </p>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
@@ -770,7 +768,7 @@ function App() {
                 <span>🚀</span>
                 <span>Transform Your Growth</span>
               </div>
-              <h2 className="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl max-w-6xl mx-auto px-6 text-center">
+              <h2 className="px-6 mx-auto mb-6 max-w-6xl text-3xl font-bold leading-tight text-center text-gray-900 md:text-5xl lg:text-6xl">
                 <span className="whitespace-nowrap">Scale your brand to the{' '}</span>
                 <span className="text-[#4792E6] italic bg-gradient-to-r from-[#4792E6] to-blue-600 bg-clip-text text-transparent whitespace-nowrap pr-4 md:pr-6 lg:pr-8">
                   next level
@@ -818,7 +816,7 @@ function App() {
                       <span className="px-2 py-1 text-xs text-white bg-red-500 rounded">15h/week</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-400">With X Pilot</span>
+                      <span className="text-sm text-gray-400">With X-Pilot</span>
                       <span className="text-xs bg-[#4792E6] text-white px-2 py-1 rounded">1.5h/week</span>
                     </div>
                     <div className="pt-2 border-t border-gray-700">
@@ -851,7 +849,7 @@ function App() {
                     </div>
                     <div className="flex justify-between text-xs text-gray-500">
                       <span>Before</span>
-                      <span>After X Pilot</span>
+                      <span>After X-Pilot</span>
                     </div>
                   </div>
                 </div>
@@ -1024,36 +1022,46 @@ function App() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="py-20 bg-gray-50">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="mb-16 text-center">
-              <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">Contact us</h2>
-              <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                Have questions or need support? We're here to help you succeed with X Pilot.
-              </p>
-            </div>
-
-            <div className="mx-auto max-w-2xl">
-              {/* Contact Info */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="mb-6 text-2xl font-bold text-center text-gray-900">Get in touch</h3>
-                  <div className="space-y-6">
-                    <div className="flex gap-4 justify-center items-center">
-                      <div className="bg-[#4792E6]/10 p-3 rounded-lg">
-                        <Mail className="h-6 w-6 text-[#4792E6]" />
-                      </div>
-                      <div>
-                        <div className="font-medium text-gray-900">Email</div>
-                        <div className="text-gray-600">xDylanLong@gmail.com</div>
-                        <div className="text-gray-600">linyanxu5@gmail.com</div>
-                      </div>
-                    </div>
+        {/* Discord Community Section */}
+        <section className="py-20 bg-gradient-to-br from-[#5865F2] to-[#4752C4]">
+          <div className="px-4 mx-auto max-w-4xl sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="mb-8">
+                <img src="/snapsnap-discord-logo.png" alt="SnapSnap Discord" className="mx-auto mb-6 w-24 h-24 rounded-2xl shadow-lg" />
+                <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl">
+                  Join Our <span className="text-yellow-300">Discord Community</span>
+                </h2>
+                <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
+                  Connect with fellow creators, get exclusive tips, and be the first to know about new features. Our community is here to help you grow!
+                </p>
+              </div>
+              
+              <div className="flex flex-col gap-6 justify-center items-center sm:flex-row">
+                <div className="flex gap-4 items-center text-white">
+                  <div className="p-3 rounded-full bg-white/20">
+                    <Users className="w-6 h-6" />
                   </div>
+                  <span className="text-lg font-medium">Many Active Members</span>
                 </div>
-
-
+                <div className="flex gap-4 items-center text-white">
+                  <div className="p-3 rounded-full bg-white/20">
+                    <MessageCircle className="w-6 h-6" />
+                  </div>
+                  <span className="text-lg font-medium">24/7 Support & Tips</span>
+                </div>
+              </div>
+              
+              <div className="mt-10">
+                <a 
+                  href="https://discord.gg/HkQpcXfx" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex gap-3 items-center bg-white text-[#5865F2] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  Join Discord Community
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
@@ -1065,18 +1073,23 @@ function App() {
             <div className="grid gap-8 mb-8 md:grid-cols-4">
               <div>
                 <div className="flex items-center mb-4 space-x-2">
-                  <div className="bg-[#4792E6] p-2 rounded-lg">
-                    <Twitter className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-xl font-bold">X Pilot</span>
+                  <img src="/xpilot-logo-fill-white.jpg" alt="X-Pilot Logo" className="w-10 h-10 rounded-lg" />
+                  <span className="text-xl font-bold">X-Pilot</span>
                 </div>
                 <p className="mb-4 text-gray-400">
                   AI-powered X account management through intelligent chat operations.
                 </p>
                 <div className="flex space-x-4">
-                  <span className="text-gray-400">
-                    <Twitter className="w-5 h-5" />
-                  </span>
+                  <a 
+                    href="https://x.com/xDylanLong" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <div className="w-5 h-5 flex items-center justify-center font-bold text-lg">
+                      𝕏
+                    </div>
+                  </a>
                   <span className="text-gray-400">
                     <Mail className="w-5 h-5" />
                   </span>
@@ -1107,7 +1120,7 @@ function App() {
               </div>
             </div>
             <div className="pt-8 text-center text-gray-400 border-t border-gray-800">
-              <p>&copy; 2025 X Pilot. All rights reserved.</p>
+              <p>&copy; 2025 X-Pilot. All rights reserved.</p>
             </div>
           </div>
         </footer>

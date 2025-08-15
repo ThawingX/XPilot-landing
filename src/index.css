@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom animations for X Pilot demo */
+/* Custom animations for X-Pilot demo */
 @keyframes fade-in {
   0% {
     opacity: 0;

@@ -1084,9 +1084,9 @@ function App() {
                     href="https://x.com/xDylanLong" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                    className="text-gray-400 transition-colors cursor-pointer hover:text-white"
                   >
-                    <div className="w-5 h-5 flex items-center justify-center font-bold text-lg">
+                    <div className="flex justify-center items-center w-5 h-5 text-lg font-bold">
                       𝕏
                     </div>
                   </a>
